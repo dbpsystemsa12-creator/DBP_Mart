@@ -729,7 +729,7 @@
                                 {products.length > 0 && filteredProducts.length === 0 && <div className="text-center py-20 text-gray-400 text-sm">No products matched your search or category.</div>}
                                 
                                 <div className="mt-12">
-                                    <div className="flex justify-between items-center mb-4"><h3 className="text-xl font-bold">Real Reviews ❤️</h3><button onClick={() => setView('feedback')} className="text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full hover:bg-purple-100">Write Review</button></div>
+                                    <div className="flex justify-between items-center mb-4"><h3 className="text-xl font-bold">Reviews</h3><button onClick={() => setView('feedback')} className="text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full hover:bg-purple-100">Write Review</button></div>
                                     {feedbacks.length === 0 ? <p className="text-sm text-gray-400">No reviews yet.</p> : (<div className="grid md:grid-cols-3 gap-4">{feedbacks.slice(0, 3).map((f, i) => (<div key={i} className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700"><div className="flex justify-between items-start mb-2"><div className="flex text-yellow-400 text-xs">{[...Array(parseInt(f.rating || 5))].map((_, idx) => <Icon key={idx} path={icons.star} className="w-3 h-3"/>)}</div><span className="text-[10px] text-gray-400">{f.date}</span></div><p className="text-xs text-gray-600 dark:text-gray-300 italic mb-2">"{f.message}"</p>{f.image && <img loading="lazy" src={f.image} className="w-16 h-16 rounded-lg object-cover mb-2 border border-gray-200" />}<p className="text-xs font-bold">- {f.name}</p></div>))}</div>)}
                                 </div>
                             </div>
@@ -1173,3 +1173,4 @@
     </script>
 </body>
 </html>
+
